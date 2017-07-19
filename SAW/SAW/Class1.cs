@@ -32,7 +32,7 @@ namespace SAW
                             }
                         }
                     }
-                    MatriksNormal[colls, rows] = NilaiAlternatif[rows,colls]/nmax;
+                    MatriksNormal[colls, rows] = NilaiAlternatif[colls,rows]/nmax;
                 }
             }
             return MatriksNormal;
