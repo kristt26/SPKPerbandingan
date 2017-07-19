@@ -13,6 +13,7 @@ namespace SAWConsole
         {
             Class1 test = new Class1();
             double[,] data = test.MatriksKeputusan();
+            Console.ReadLine();
         }
     }
 }
