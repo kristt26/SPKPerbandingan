@@ -8,31 +8,33 @@ namespace SAW
 {
     public class Class1
     {
-        public int coll = 6;
-        public int row = 5;       
-        double[,] NilaiAlternatif = { { 1, 3, 2, 1, 5, 3, 2 }, { 1, 2, 3, 2, 4, 2, 1 }, { 1, 1, 4, 3, 3, 1, 2 }, { 1, 2, 5, 4, 2, 3, 1 }, { 1, 3, 1, 5, 3, 2, 2 }, { 1, 1, 3, 3, 2, 1, 1 } };
+        public int colls = 7;
+        public int rows = 6;       
+        double[,] NilaiAlternatif = {
+                { 1, 3, 2, 1, 5, 3, 2 },
+                { 1, 2, 3, 2, 4, 2, 1 }, 
+                { 1, 1, 4, 3, 3, 1, 2 },
+                { 1, 2, 5, 4, 2, 3, 1 }, 
+                { 1, 3, 1, 5, 3, 2, 2 },
+                { 1, 1, 3, 3, 2, 1, 1 }
+        };
         double[] bobot = { 0.25, 0.25, 0.10, 0.10, 0.10, 0.10, 0.10 };
        
         public double[,] MatriksKeputusan()
         {
-             double[,] MatriksNormal = new double[coll, row];
+             double[,] MatriksNormal = new double[rows,colls];
 
-            for (int colls = 0; colls <= coll; colls++)
+            for (int coll = 0; coll <= colls-1; coll++)
             {
-                for (int rows = 0; rows <= row; rows++)
+                double[] data = new double[rows];
+                for (int row = 0; row <= rows-1; row++)
                 {
-                    double nmax = 0;
-                    for (int i = colls; i <= colls; i++)
-                    {
-                        for (int j = 0; j <= row; j++)
-                        {
-                            if (NilaiAlternatif[i, j] > nmax)
-                            {
-                                nmax = NilaiAlternatif[j, i];
-                            }
-                        }
-                    }
-                    MatriksNormal[colls, rows] = NilaiAlternatif[rows,colls]/nmax;
+                    data[row] = NilaiAlternatif[row,coll];
+                }
+                double max = MaxOfArray(data);
+                for (int row = 0; row <= rows - 1; row++)
+                {
+                    MatriksNormal[row,coll] = NilaiAlternatif[row,coll] / max;
                 }
             }
             return MatriksNormal;
@@ -41,17 +43,44 @@ namespace SAW
         public double[] Hasil()
         {
             double[,] MatriksN = MatriksKeputusan();
-            double[] hasil = new double[coll];
-            for (int i = 0; i <= row; i++)
+            double[] hasil = new double[colls];
+            for (int i = 0; i <= rows-1; i++)
             {
 
-                for (int j = 0; j <= coll; j++)
+                for (int j = 0; j <= colls-1; j++)
                 {
 
                     hasil[i] += bobot[i] * MatriksN[i, j]; 
                 }
             }
             return hasil;
+        }
+
+        public double MaxOfArray(double[] data)
+        {
+            var awal = data[0];
+            foreach(var item in data)
+            {
+                if(awal<item)
+                {
+                    awal = item;
+                }
+            }
+            return awal;
+        }
+
+
+        public double MinOfArray(double[] data)
+        {
+            var awal = data[0];
+            foreach (var item in data)
+            {
+                if (awal > item)
+                {
+                    awal = item;
+                }
+            }
+            return awal;
         }
     }
 
