@@ -55,6 +55,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\TOPSIS\TOPSIS.csproj">
+      <Project>{3b6aee60-681f-4d9c-bfaf-3fce0dc5f4f9}</Project>
+      <Name>TOPSIS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WP\WP.csproj">
+      <Project>{aa25a17c-f1f4-48b2-85a8-d5238782c2bd}</Project>
+      <Name>WP</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SAW\SAW.csproj">
       <Project>{8d7bce99-0873-483d-b885-98a64f53d1c6}</Project>
       <Name>SAW</Name>

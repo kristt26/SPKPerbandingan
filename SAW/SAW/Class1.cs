@@ -48,14 +48,14 @@ namespace SAW
         public double[] Hasil()
         {
             double[,] MatriksN = MatriksKeputusan();
-            double[] hasil = new double[colls];
+            double[] hasil = new double[rows];
             for (int i = 0; i <= rows-1; i++)
             {
 
                 for (int j = 0; j <= colls-1; j++)
                 {
 
-                    hasil[i] += bobot[i] * MatriksN[i, j]; 
+                    hasil[i] += bobot[j] * MatriksN[i, j]; 
                 }
             }
             return hasil;
