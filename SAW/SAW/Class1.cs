@@ -26,6 +26,7 @@ namespace SAW
 
             for (int coll = 0; coll <= colls-1; coll++)
             {
+                //test
                 double[] data = new double[rows];
                 for (int row = 0; row <= rows-1; row++)
                 {
