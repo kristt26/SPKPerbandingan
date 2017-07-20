@@ -48,6 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SAWtest.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -62,6 +63,10 @@
     <ProjectReference Include="..\..\WP\WP.csproj">
       <Project>{aa25a17c-f1f4-48b2-85a8-d5238782c2bd}</Project>
       <Name>WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Commmon\Commmon.csproj">
+      <Project>{24543D9C-A6C1-4B91-99AD-0EDE67BE3619}</Project>
+      <Name>Commmon</Name>
     </ProjectReference>
     <ProjectReference Include="..\SAW\SAW.csproj">
       <Project>{8d7bce99-0873-483d-b885-98a64f53d1c6}</Project>

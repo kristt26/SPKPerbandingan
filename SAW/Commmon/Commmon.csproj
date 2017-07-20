@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D7BCE99-0873-483D-B885-98A64F53D1C6}</ProjectGuid>
+    <ProjectGuid>{24543D9C-A6C1-4B91-99AD-0EDE67BE3619}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SAW</RootNamespace>
-    <AssemblyName>SAW</AssemblyName>
+    <RootNamespace>Commmon</RootNamespace>
+    <AssemblyName>Commmon</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,16 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Proccess.cs" />
+    <Compile Include="Alternative.cs" />
+    <Compile Include="Criteria.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Range.cs" />
     <Compile Include="Siswa.cs" />
+    <Compile Include="TeoriMatematika.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Commmon\Commmon.csproj">
-      <Project>{24543d9c-a6c1-4b91-99ad-0ede67be3619}</Project>
-      <Name>Commmon</Name>
-    </ProjectReference>
+    <Compile Include="CriteriasCollection.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
