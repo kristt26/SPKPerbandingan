@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAW", "SAW\SAW.csproj", "{8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject2", "UnitTestProject2\UnitTestProject2.csproj", "{0CD82B29-3606-4508-873E-D97D1107FE1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP", "..\WP\WP.csproj", "{AA25A17C-F1F4-48B2-85A8-D5238782C2BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOPSIS", "..\TOPSIS\TOPSIS.csproj", "{3B6AEE60-681F-4D9C-BFAF-3FCE0DC5F4F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{0CD82B29-3606-4508-873E-D97D1107FE1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CD82B29-3606-4508-873E-D97D1107FE1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CD82B29-3606-4508-873E-D97D1107FE1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA25A17C-F1F4-48B2-85A8-D5238782C2BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA25A17C-F1F4-48B2-85A8-D5238782C2BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA25A17C-F1F4-48B2-85A8-D5238782C2BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA25A17C-F1F4-48B2-85A8-D5238782C2BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B6AEE60-681F-4D9C-BFAF-3FCE0DC5F4F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B6AEE60-681F-4D9C-BFAF-3FCE0DC5F4F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B6AEE60-681F-4D9C-BFAF-3FCE0DC5F4F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B6AEE60-681F-4D9C-BFAF-3FCE0DC5F4F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
