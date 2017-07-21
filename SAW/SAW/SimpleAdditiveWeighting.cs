@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SAW
 {
-    public class Class1
+    public class SimpleAdditiveWeighting
     {
         public int colls = 7;
         public int rows = 6;       
