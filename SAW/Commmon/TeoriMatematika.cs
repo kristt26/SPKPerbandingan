@@ -27,7 +27,7 @@ public class TeoriMatematika : Alternative
 
         }
     }
-
+    //test
     public List<Range> Ranks { get; private set; }
 
    
