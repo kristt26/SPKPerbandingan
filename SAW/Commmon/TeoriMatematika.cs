@@ -12,8 +12,9 @@ namespace Commmon
         private Criteria criteria = new Criteria();
        
        
-        public TeoriMatematika()
+        public TeoriMatematika(string name):base(name)
         {
+            
         }
 
         public double Nilai { get; set; }
