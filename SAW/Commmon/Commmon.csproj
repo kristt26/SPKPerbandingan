@@ -43,10 +43,16 @@
   <ItemGroup>
     <Compile Include="Alternative.cs" />
     <Compile Include="Criteria.cs" />
+    <Compile Include="KeahliahJurusan.cs" />
+    <Compile Include="KelengkapanBerkas.cs" />
+    <Compile Include="Kesehatan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Range.cs" />
     <Compile Include="Siswa.cs" />
+    <Compile Include="TeoriBahasaIndonesia.cs" />
+    <Compile Include="TeoriBahasaInggris.cs" />
     <Compile Include="TeoriMatematika.cs" />
+    <Compile Include="Wawancara.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CriteriasCollection.cs" />

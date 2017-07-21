@@ -23,13 +23,14 @@ namespace Commmon
             var c7 = new Criteria { Id = 7, Code = "C7", Bobot = 0.1 };
 
             //instance  Alterntive and inisialisasi to criteria 
-            c1.Alternatives = new ObservableCollection<Alternative>();
+            /*c1.Alternatives = new ObservableCollection<Alternative>();
+            c1.Alternatives.Add(new Alternative {})
             c2.Alternatives = new ObservableCollection<Alternative>();
             c3.Alternatives = new ObservableCollection<Alternative>();
             c4.Alternatives = new ObservableCollection<Alternative>();
             c5.Alternatives = new ObservableCollection<Alternative>();
             c6.Alternatives = new ObservableCollection<Alternative>();
-            c7.Alternatives = new ObservableCollection<Alternative>();
+            c7.Alternatives = new ObservableCollection<Alternative>();*/
 
 
             //Inisialisasi Criteria To  Criterias

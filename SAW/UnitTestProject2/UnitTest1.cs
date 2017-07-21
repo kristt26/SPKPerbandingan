@@ -22,7 +22,7 @@ namespace UnitTestProject2
         {
             Class1 MatriksHsl = new Class1();
             double[] DataHsl = MatriksHsl.Hasil();
-            Assert.AreEqual(0.86,DataHsl[0]);
+            Assert.AreEqual(1.4,DataHsl[0]);
         }
 
         //Metode WP
