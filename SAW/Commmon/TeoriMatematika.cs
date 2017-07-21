@@ -1,24 +1,34 @@
-﻿using System;
+﻿using Commmon;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Commmon
+
+
+public class TeoriMatematika : Alternative
 {
+    private Criteria criteria = new Criteria();
+    private double _nilai;
 
-    public class TeoriMatematika:Alternative
+    public TeoriMatematika(string name) : base(name)
     {
-        private Criteria criteria = new Criteria();
-       
-       
-        public TeoriMatematika(string name):base(name)
-        {
-            
-        }
-
-        public double Nilai { get; set; }
-
-       
+        Ranks = new List<Range>();
+        Ranks.Add(new Range("0-50",0, 50,1,0));
     }
+
+    public double Nilai
+    {
+        set
+        {
+            _nilai = value;
+            this.Rank = Ranks.Where(O => O.Min >= value && O.Max <= value).FirstOrDefault().Rank;
+
+        }
+    }
+
+    public List<Range> Ranks { get; private set; }
+
+   
 }
