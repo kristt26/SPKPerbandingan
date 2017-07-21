@@ -10,20 +10,23 @@ using System.Threading.Tasks;
 public class KelengkapanBerkas : Alternative
 {
     private Criteria criteria = new Criteria();
-    private double _nilai;
-    public KelengkapanBerkas(string name) : base(name)
+    private StatusBerkas _nilai;
+    public KelengkapanBerkas()
     {
-        Ranks = new List<Range>();
-        Ranks.Add(new Range("0-50", 0, 50, 0, 0));
-        Ranks.Add(new Range("0-100", 51, 10, 1, 0));
+       
     }
 
-    public double Nilai
+    public StatusBerkas Nilai
     {
         set
         {
             _nilai = value;
-            this.Bobot = Ranks.Where(O => O.Min >= value && O.Max <= value).FirstOrDefault().Rank;
+            if (value == StatusBerkas.Lengkap)
+            {
+                this.Rank = 1;
+            }
+            else
+                this.Rank = 0;
 
         }
     }

@@ -8,12 +8,16 @@ namespace Commmon
 {
    public  class Siswa
     {       
-        public KelengkapanBerkas KelengkapanBerkas { get; set; }
-        public KeahliahJurusan KeahliahJurusan { get; set; }
-        public TeoriBahasaInggris TeoriBahasaInggris { get; set; }
-        public TeoriBahasaIndonesia TeoriBahasaIndonesia { get; set; }
-        public TeoriMatematika TeoriMatematika { get; set; }
-        public Wawancara Wawancara { get; set; }
-        public Kesehatan Kesehatan { get; set; }
+        public KelengkapanBerkas Kelengkapan{ get; set; }
+        public KeahliahJurusan Keahliah { get; set; }
+        public TeoriBahasaInggris BahasaInggris { get; set; }
+        public TeoriBahasaIndonesia BahasaIndonesia { get; set; }
+        public TeoriMatematika Matematika { get; set; }
+        public Wawancara HasilWawancara { get; set; }
+        public Kesehatan HasilKesehatan { get; set; }
+        public int IdPendaftaran { get; set; }
+        public Siswa()
+        {
+        }
     }
 }

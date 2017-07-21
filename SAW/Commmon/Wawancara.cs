@@ -9,23 +9,26 @@ namespace Commmon
     public class Wawancara : Alternative
     {
         private Criteria criteria = new Criteria();
-        private double _nilai;
+        private StatusWawancara _nilai;
 
-        public Wawancara(string name):base(name)
+        public Wawancara()
         {
-            Ranks = new List<Range>();
-            Ranks.Add(new Range("0-50", 0, 50, 0, 0));
-            Ranks.Add(new Range("51-60", 51, 60, 1, 0));
-            Ranks.Add(new Range("61-70", 61, 70, 2, 0));
-            Ranks.Add(new Range("71-80", 71, 80, 3, 0));
+           
         }
 
-        public double Nilai
+        public StatusWawancara Nilai
         {
             set
             {
                 _nilai = value;
-                this.Bobot = Ranks.Where(O => O.Min >= value && O.Max <= value).FirstOrDefault().Rank;
+                if (_nilai == StatusWawancara.Tidak)
+                    this.Rank = 0;
+                else if (_nilai == StatusWawancara.Kurang)
+                    this.Rank = 1;
+                else if (_nilai == StatusWawancara.Cukup)
+                    this.Rank = 2;
+                else
+                    this.Rank = 3;
 
             }
         }

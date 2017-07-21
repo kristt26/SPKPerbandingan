@@ -1,17 +1,13 @@
-﻿using Commmon;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SAW
 {
-   public  class Proccess
+    class Testing
     {
-       
+        public int[,] Nilai = { { } }
     }
-
-
 }

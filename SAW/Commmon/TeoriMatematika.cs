@@ -12,15 +12,17 @@ public class TeoriMatematika : Alternative
     private Criteria criteria = new Criteria();
     private double _nilai;
 
-    public TeoriMatematika(string name) : base(name)
+    public TeoriMatematika()
     {
-        Ranks = new List<Range>();
-        Ranks.Add(new Range("0-50",0, 50,0,0));
-        Ranks.Add(new Range("51-60", 51, 60, 1, 0));
-        Ranks.Add(new Range("61-70", 61, 70, 2, 0));
-        Ranks.Add(new Range("71-80", 71, 80, 3, 0));
-        Ranks.Add(new Range("81-90", 81, 90, 4, 0));
-        Ranks.Add(new Range("91-100", 91, 100, 5, 0));
+        Ranks = new List<Range>
+        {
+            new Range("0-50", 0, 50, 0, 0),
+            new Range("51-60", 51, 60, 1, 0),
+            new Range("61-70", 61, 70, 2, 0),
+            new Range("71-80", 71, 80, 3, 0),
+            new Range("81-90", 81, 90, 4, 0),
+            new Range("91-100", 91, 100, 5, 0)
+        };
     }
 
     public double Nilai
@@ -28,7 +30,7 @@ public class TeoriMatematika : Alternative
         set
         {
             _nilai = value;
-            this.Bobot = Ranks.Where(O => O.Min >= value && O.Max <= value).FirstOrDefault().Rank;
+            this.Rank= Ranks.Where(O => O.Min <= value && O.Max >= value).FirstOrDefault().Rank;
 
         }
     }

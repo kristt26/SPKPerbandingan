@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Alternative.cs" />
     <Compile Include="Criteria.cs" />
+    <Compile Include="EnumCollection.cs" />
     <Compile Include="KeahliahJurusan.cs" />
     <Compile Include="KelengkapanBerkas.cs" />
     <Compile Include="Kesehatan.cs" />

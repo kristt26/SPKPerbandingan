@@ -11,15 +11,17 @@ namespace Commmon
         private Criteria criteria = new Criteria();
         private double _nilai;
 
-        public TeoriBahasaIndonesia(string name):base(name)
+        public TeoriBahasaIndonesia()
         {
-            Ranks = new List<Range>();
-            Ranks.Add(new Range("0-50", 0, 50, 0, 0));
-            Ranks.Add(new Range("51-60", 51, 60, 1, 0));
-            Ranks.Add(new Range("61-70", 61, 70, 2, 0));
-            Ranks.Add(new Range("71-80", 71, 80, 3, 0));
-            Ranks.Add(new Range("81-90", 81, 90, 4, 0));
-            Ranks.Add(new Range("91-100", 91, 100, 5, 0));
+            Ranks = new List<Range>
+            {
+                new Range("0-50", 0, 50, 0, 0),
+                new Range("51-60", 51, 60, 0, 1),
+                new Range("61-70", 61, 70, 0, 2),
+                new Range("71-80", 71, 80, 0, 3),
+                new Range("81-90", 81, 90, 0, 4),
+                new Range("91-100", 91, 100, 0, 5)
+            };
         }
 
         public double Nilai
@@ -27,11 +29,16 @@ namespace Commmon
             set
             {
                 _nilai = value;
-                this.Bobot = Ranks.Where(O => O.Min >= value && O.Max <= value).FirstOrDefault().Rank;
+                this.Rank= Ranks.Where(O => O.Min <= value && O.Max >= value).FirstOrDefault().Rank;
 
             }
         }
 
         public List<Range> Ranks { get; private set; }
+
+        public static implicit operator TeoriBahasaIndonesia(double v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
