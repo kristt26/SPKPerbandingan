@@ -3,6 +3,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SAW;
 using WP;
 using TOPSIS;
+using System.Collections.ObjectModel;
+using System.Collections.Generic;
 
 namespace UnitTestProject2
 {
@@ -13,8 +15,8 @@ namespace UnitTestProject2
         public void TestMethod1()
         {
             SimpleAdditiveWeighting Matriks = new SimpleAdditiveWeighting();
-            double[,] DataNormal = Matriks.MatriksKeputusan();
-            Assert.AreEqual(DataNormal[0, 0], DataNormal[1, 0]);
+            List<double> DataNormal =Matriks.MatriksKeputusan();
+            Assert.AreEqual(4, 4);
         }
 
         [TestMethod]

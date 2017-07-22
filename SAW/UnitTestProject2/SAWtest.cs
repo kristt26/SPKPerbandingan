@@ -13,7 +13,7 @@ namespace UnitTestProject2
         [TestMethod]
         public void RankIsThereWhenNilaiSiswaISet ()
         {
-           var data= Commmon.CriteriasCollection.Get();
+            var data = Commmon.CriteriasCollection.Get();
             Assert.IsTrue(data.Count > 0);
         }
     }
