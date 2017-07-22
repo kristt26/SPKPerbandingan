@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Commmon
 {
-   public static class CriteriasCollection
+    public static class CriteriasCollection
     {
 
         public static ObservableCollection<Criteria> Get()
