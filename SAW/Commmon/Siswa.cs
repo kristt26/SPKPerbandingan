@@ -16,8 +16,6 @@ namespace Commmon
         public Wawancara HasilWawancara { get; set; }
         public Kesehatan HasilKesehatan { get; set; }
         public int IdPendaftaran { get; set; }
-        public Siswa()
-        {
-        }
+      
     }
 }

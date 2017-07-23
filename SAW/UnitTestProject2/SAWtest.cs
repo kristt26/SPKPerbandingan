@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Commmon;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +14,17 @@ namespace UnitTestProject2
         [TestMethod]
         public void RankIsThereWhenNilaiSiswaISet ()
         {
-            var data = Commmon.CriteriasCollection.Get();
-            Assert.IsTrue(data.Count > 0);
+            var data = new SAW.SimpleAdditiveWeighting();
+            var a = data.MatriksKeputusan();
+            Assert.IsTrue(a.Count > 0);
+        }
+
+        [TestMethod]
+        public void TestTeoriBahasaIndonesiaketikaNilai0_50()
+        {            
+            Siswa a = new Siswa { BahasaIndonesia = new TeoriBahasaIndonesia { Nilai = 73 }, Kelengkapan = new KelengkapanBerkas { Nilai = StatusBerkas.Lengkap }, Keahliah = new KeahliahJurusan { Nilai = 73 }, BahasaInggris = new TeoriBahasaInggris { Nilai = 82 }, Matematika = new TeoriMatematika { Nilai = 60 }, HasilWawancara = new Wawancara { Nilai = StatusWawancara.Kurang }, HasilKesehatan = new Kesehatan { Nilai = StatusKesehatan.SehatJasmani }, IdPendaftaran = 1 };
+
+            Assert.IsTrue(a.BahasaIndonesia.Rank != 0);
         }
     }
 }

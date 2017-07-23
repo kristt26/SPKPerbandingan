@@ -43,7 +43,6 @@
     <Compile Include="SimpleAdditiveWeighting.cs" />
     <Compile Include="Proccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Siswa.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Commmon\Commmon.csproj">

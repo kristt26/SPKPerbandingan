@@ -9,6 +9,19 @@ namespace Commmon
 {
    public static class CriteriasCollection
     {
+        public static List<Siswa> DataSiswa()
+        {
+            List<Siswa> Siswas = new List<Siswa> {
+                new Siswa{ BahasaIndonesia=new TeoriBahasaIndonesia{ Nilai=73 }, Kelengkapan=new KelengkapanBerkas{Nilai= StatusBerkas.Lengkap }, Keahliah=new KeahliahJurusan{Nilai=73 }, BahasaInggris=new TeoriBahasaInggris{ Nilai=82}, Matematika=new TeoriMatematika{ Nilai= 60}, HasilWawancara=new Wawancara{ Nilai=StatusWawancara.Kurang}, HasilKesehatan= new Kesehatan{Nilai= StatusKesehatan.SehatJasmani }, IdPendaftaran=1 },
+                new Siswa{ BahasaIndonesia=new TeoriBahasaIndonesia{ Nilai=92 }, Kelengkapan=new KelengkapanBerkas{Nilai= StatusBerkas.Lengkap }, Keahliah=new KeahliahJurusan{Nilai=94 }, BahasaInggris=new TeoriBahasaInggris{ Nilai=64}, Matematika=new TeoriMatematika{ Nilai= 50}, HasilWawancara=new Wawancara{ Nilai=StatusWawancara.Cukup}, HasilKesehatan= new Kesehatan{Nilai= StatusKesehatan.SehatJasmani }, IdPendaftaran=2 },
+                new Siswa{ BahasaIndonesia=new TeoriBahasaIndonesia{ Nilai=85 }, Kelengkapan=new KelengkapanBerkas{Nilai= StatusBerkas.Lengkap }, Keahliah=new KeahliahJurusan{Nilai=82 }, BahasaInggris=new TeoriBahasaInggris{ Nilai=80}, Matematika=new TeoriMatematika{ Nilai= 70}, HasilWawancara=new Wawancara{ Nilai=StatusWawancara.Tidak}, HasilKesehatan= new Kesehatan{Nilai= StatusKesehatan.Sehat }, IdPendaftaran=3 },
+                new Siswa{ BahasaIndonesia=new TeoriBahasaIndonesia{ Nilai=65 }, Kelengkapan=new KelengkapanBerkas{Nilai= StatusBerkas.Lengkap }, Keahliah=new KeahliahJurusan{Nilai=76 }, BahasaInggris=new TeoriBahasaInggris{ Nilai=50}, Matematika=new TeoriMatematika{ Nilai= 91}, HasilWawancara=new Wawancara{ Nilai=StatusWawancara.Siap}, HasilKesehatan= new Kesehatan{Nilai= StatusKesehatan.Sehat}, IdPendaftaran=4 },
+                new Siswa{ BahasaIndonesia=new TeoriBahasaIndonesia{ Nilai=94 }, Kelengkapan=new KelengkapanBerkas{Nilai= StatusBerkas.Lengkap }, Keahliah=new KeahliahJurusan{Nilai=92 }, BahasaInggris=new TeoriBahasaInggris{ Nilai=70}, Matematika=new TeoriMatematika{ Nilai= 71}, HasilWawancara=new Wawancara{ Nilai=StatusWawancara.Kurang}, HasilKesehatan= new Kesehatan{Nilai= StatusKesehatan.SehatJasmani}, IdPendaftaran=5 },
+                new Siswa{ BahasaIndonesia=new TeoriBahasaIndonesia{ Nilai=83 }, Kelengkapan=new KelengkapanBerkas{Nilai= StatusBerkas.Lengkap }, Keahliah=new KeahliahJurusan{Nilai=80 }, BahasaInggris=new TeoriBahasaInggris{ Nilai=53}, Matematika=new TeoriMatematika{ Nilai= 80}, HasilWawancara=new Wawancara{ Nilai=StatusWawancara.Cukup}, HasilKesehatan= new Kesehatan{Nilai= StatusKesehatan.Tidak}, IdPendaftaran=6 },
+                new Siswa{ BahasaIndonesia=new TeoriBahasaIndonesia{ Nilai=55 }, Kelengkapan=new KelengkapanBerkas{Nilai= StatusBerkas.Lengkap }, Keahliah=new KeahliahJurusan{Nilai=86 }, BahasaInggris=new TeoriBahasaInggris{ Nilai=93}, Matematika=new TeoriMatematika{ Nilai= 60}, HasilWawancara=new Wawancara{ Nilai=StatusWawancara.Tidak}, HasilKesehatan= new Kesehatan{Nilai= StatusKesehatan.SehatJasmani}, IdPendaftaran=7 }
+        };
+            return Siswas;
+        }
 
         public static ObservableCollection<Criteria> Get()
         {
@@ -42,31 +55,7 @@ namespace Commmon
             Cristerias.Add(c5);
             Cristerias.Add(c6);
             Cristerias.Add(c7);
-            List<Siswa> Siswas = new List<Siswa> {
-                new Siswa{ BahasaIndonesia=new TeoriBahasaIndonesia{ Nilai=70 }, Kelengkapan=new KelengkapanBerkas{Nilai= StatusBerkas.Lengkap }, Keahliah=new KeahliahJurusan{Nilai=50 }, BahasaInggris=new TeoriBahasaInggris{ Nilai=40}, Matematika=new TeoriMatematika{ Nilai= 60}, HasilWawancara=new Wawancara{ Nilai=StatusWawancara.Kurang}, HasilKesehatan= new Kesehatan{Nilai= StatusKesehatan.SehatJasmani }, IdPendaftaran=1 },
-                new Siswa{ BahasaIndonesia=new TeoriBahasaIndonesia{ Nilai=50 }, Kelengkapan=new KelengkapanBerkas{Nilai= StatusBerkas.Lengkap }, Keahliah=new KeahliahJurusan{Nilai=90 }, BahasaInggris=new TeoriBahasaInggris{ Nilai=60}, Matematika=new TeoriMatematika{ Nilai= 50}, HasilWawancara=new Wawancara{ Nilai=StatusWawancara.Cukup}, HasilKesehatan= new Kesehatan{Nilai= StatusKesehatan.SehatJasmani }, IdPendaftaran=2 },
-                new Siswa{ BahasaIndonesia=new TeoriBahasaIndonesia{ Nilai=80 }, Kelengkapan=new KelengkapanBerkas{Nilai= StatusBerkas.Lengkap }, Keahliah=new KeahliahJurusan{Nilai=20 }, BahasaInggris=new TeoriBahasaInggris{ Nilai=40}, Matematika=new TeoriMatematika{ Nilai= 70}, HasilWawancara=new Wawancara{ Nilai=StatusWawancara.Tidak}, HasilKesehatan= new Kesehatan{Nilai= StatusKesehatan.Sehat }, IdPendaftaran=3 },
-                new Siswa{ BahasaIndonesia=new TeoriBahasaIndonesia{ Nilai=65 }, Kelengkapan=new KelengkapanBerkas{Nilai= StatusBerkas.Lengkap }, Keahliah=new KeahliahJurusan{Nilai=60 }, BahasaInggris=new TeoriBahasaInggris{ Nilai=50}, Matematika=new TeoriMatematika{ Nilai= 90}, HasilWawancara=new Wawancara{ Nilai=StatusWawancara.Siap}, HasilKesehatan= new Kesehatan{Nilai= StatusKesehatan.Sehat}, IdPendaftaran=4 },
-                new Siswa{ BahasaIndonesia=new TeoriBahasaIndonesia{ Nilai=90 }, Kelengkapan=new KelengkapanBerkas{Nilai= StatusBerkas.Lengkap }, Keahliah=new KeahliahJurusan{Nilai=70 }, BahasaInggris=new TeoriBahasaInggris{ Nilai=70}, Matematika=new TeoriMatematika{ Nilai= 50}, HasilWawancara=new Wawancara{ Nilai=StatusWawancara.Kurang}, HasilKesehatan= new Kesehatan{Nilai= StatusKesehatan.SehatJasmani}, IdPendaftaran=5 },
-                new Siswa{ BahasaIndonesia=new TeoriBahasaIndonesia{ Nilai=80 }, Kelengkapan=new KelengkapanBerkas{Nilai= StatusBerkas.Lengkap }, Keahliah=new KeahliahJurusan{Nilai=80 }, BahasaInggris=new TeoriBahasaInggris{ Nilai=80}, Matematika=new TeoriMatematika{ Nilai= 80}, HasilWawancara=new Wawancara{ Nilai=StatusWawancara.Cukup}, HasilKesehatan= new Kesehatan{Nilai= StatusKesehatan.Tidak}, IdPendaftaran=6 },
-                new Siswa{ BahasaIndonesia=new TeoriBahasaIndonesia{ Nilai=55 }, Kelengkapan=new KelengkapanBerkas{Nilai= StatusBerkas.Lengkap }, Keahliah=new KeahliahJurusan{Nilai=90 }, BahasaInggris=new TeoriBahasaInggris{ Nilai=90}, Matematika=new TeoriMatematika{ Nilai= 60}, HasilWawancara=new Wawancara{ Nilai=StatusWawancara.Tidak}, HasilKesehatan= new Kesehatan{Nilai= StatusKesehatan.SehatJasmani}, IdPendaftaran=7 }
-        };
-
-            foreach(var criteria in Cristerias)
-            {
-                criteria.Alternatives = new ObservableCollection<Alternative>();
-                foreach(Siswa siswa in Siswas)
-                {
-                    var propertiesOfSiswa = siswa.GetType().GetProperties();
-                    var alternatifProp = propertiesOfSiswa.Where(O => O.PropertyType.Name == criteria.TypeAlternative.Name).FirstOrDefault();
-                    object aa =Activator.CreateInstance(alternatifProp.PropertyType);
-                    Alternative al =(Alternative) alternatifProp.GetValue(siswa,null);
-                    al.CriteriaCode = criteria.Code;
-                    al.IdPendaftaran = siswa.IdPendaftaran;
-                    criteria.Alternatives.Add(al);
-                }
-            }
-
+           
 
             return Cristerias;
         }

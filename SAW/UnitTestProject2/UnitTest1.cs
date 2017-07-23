@@ -15,7 +15,7 @@ namespace UnitTestProject2
         public void TestMethod1()
         {
             SimpleAdditiveWeighting Matriks = new SimpleAdditiveWeighting();
-            List<double> DataNormal =Matriks.MatriksKeputusan();
+            var DataNormal =Matriks.MatriksKeputusan();
             Assert.AreEqual(4, 4);
         }
 

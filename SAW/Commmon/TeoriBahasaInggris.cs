@@ -29,7 +29,7 @@ namespace Commmon
             set
             {
                 _nilai = value;
-                this.Bobot = Ranks.Where(O => O.Min <= value && O.Max >= value).FirstOrDefault().Bobot;
+                this.Rank= Ranks.Where(O => O.Min <= value && O.Max >= value).FirstOrDefault().Rank;
 
             }
         }

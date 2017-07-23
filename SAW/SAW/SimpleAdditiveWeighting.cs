@@ -28,21 +28,23 @@ namespace SAW
             var Datas = CriteriasCollection.Get();
             return Datas;
         }
-        public List<double> MatriksKeputusan()
+        public List<SiswaMatriks> MatriksKeputusan()
         {
             double[,] MatriksNormal = new double[rows, colls];
             List<double> normals = new List<double>();
             ObservableCollection<Criteria> Datas = _NilaiAlternatif();
-            foreach(var Data in Datas)
-            {
-                foreach(var Att in Data.Alternatives)
+
+            var DatasMatriks = new List<SiswaMatriks>();
+           
+                foreach(var siswa in CriteriasCollection.DataSiswa())
                 {
-                    var a = Att.Rank;
-                    
-                    normals.Add(a);
-                    
+                var a = new SiswaMatriks { Kelengkapan = siswa.Kelengkapan.Rank, IdPendaftaran = siswa.IdPendaftaran, Keahlian = siswa.Keahliah.Rank, NilaiBahasaIndonesia = siswa.BahasaIndonesia.Rank, NilaiBahasaInggris = siswa.BahasaInggris.Rank, NilaiMatematika = siswa.Matematika.Rank, NilaiWawancara = siswa.HasilWawancara.Rank, NilaiKesehatan = siswa.HasilKesehatan.Rank };
+                DatasMatriks.Add(a);
                 }
-            }
+            
+
+
+            
             for (int coll = 0; coll <= colls - 1; coll++)
             {
                 double[] data = new double[rows];
@@ -56,7 +58,7 @@ namespace SAW
                     MatriksNormal[row, coll] = NilaiAlternatif[row, coll] / max;
                 }
             }
-            return normals;
+            return DatasMatriks;
         }
 
         public double[] Hasil()
