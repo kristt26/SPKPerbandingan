@@ -12,7 +12,7 @@ namespace UnitTestProject2
         [TestMethod]
         public void TestMethod1()
         {
-            Class1 Matriks = new Class1();
+            SimpleAdditiveWeighting Matriks = new SimpleAdditiveWeighting();
             double[,] DataNormal = Matriks.MatriksKeputusan();
             Assert.AreEqual(DataNormal[0, 0], DataNormal[1, 0]);
         }
@@ -20,9 +20,9 @@ namespace UnitTestProject2
         [TestMethod]
         public void TestMethod2()
         {
-            Class1 MatriksHsl = new Class1();
+            SimpleAdditiveWeighting MatriksHsl = new SimpleAdditiveWeighting();
             double[] DataHsl = MatriksHsl.Hasil();
-            Assert.AreEqual(0.86,DataHsl[0]);
+            Assert.AreEqual(1.4,DataHsl[0]);
         }
 
         //Metode WP
