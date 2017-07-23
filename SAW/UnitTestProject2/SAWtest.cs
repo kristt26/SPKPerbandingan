@@ -13,10 +13,8 @@ namespace UnitTestProject2
         [TestMethod]
         public void RankIsThereWhenNilaiSiswaISet ()
         {
-            var saw = new SAW.Proccess();
-            var siswa=saw.DataSiswa.FirstOrDefault();
-
-            Assert.AreEqual(1, siswa.TeoriMatematika.Rank);
+           var data= Commmon.CriteriasCollection.Get();
+            Assert.IsTrue(data.Count > 0);
         }
     }
 }

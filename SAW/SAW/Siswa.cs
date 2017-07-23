@@ -8,6 +8,10 @@ namespace Commmon
 {
    public  class Siswa
     {
-        public TeoriMatematika  TeoriMatematika { get; set; }
+        public Siswa()
+        {
+
+        }
+        public TeoriMatematika  Matematika { get; set; }
     }
 }

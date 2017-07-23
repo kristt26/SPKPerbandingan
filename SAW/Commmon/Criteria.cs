@@ -16,5 +16,6 @@ namespace Commmon
         public object UserValue { get; set; }
 
         public ObservableCollection<Alternative> Alternatives { get; set; }
+        public Type TypeAlternative { get; internal set; }
     }
 }
