@@ -23,88 +23,45 @@ namespace SAW
 
         double[] bobot = { 0.25, 0.25, 0.10, 0.10, 0.10, 0.10, 0.10 };
 
-        public ObservableCollection<Criteria> _NilaiAlternatif()
+
+        public List<SiswaMatriks> MatriksNormal()
         {
-            var Datas = CriteriasCollection.Get();
-            return Datas;
-        }
-        public List<SiswaMatriks> MatriksKeputusan()
-        {
-            double[,] MatriksNormal = new double[rows, colls];
-            List<double> normals = new List<double>();
-            ObservableCollection<Criteria> Datas = _NilaiAlternatif();
-
-            var DatasMatriks = new List<SiswaMatriks>();
-           
-                foreach(var siswa in CriteriasCollection.DataSiswa())
-                {
-                var a = new SiswaMatriks { Kelengkapan = siswa.Kelengkapan.Rank, IdPendaftaran = siswa.IdPendaftaran, Keahlian = siswa.Keahliah.Rank, NilaiBahasaIndonesia = siswa.BahasaIndonesia.Rank, NilaiBahasaInggris = siswa.BahasaInggris.Rank, NilaiMatematika = siswa.Matematika.Rank, NilaiWawancara = siswa.HasilWawancara.Rank, NilaiKesehatan = siswa.HasilKesehatan.Rank };
-                DatasMatriks.Add(a);
-                }
-            
-
-
-            
-            for (int coll = 0; coll <= colls - 1; coll++)
+            var Matriks_Keputusan = new NilaiAlternatif_Matriks().MatriksKeputusan();
+            var _NilaiAlternatif = Matriks_Keputusan.Clone().ToArray();
+            foreach (var siswa in Matriks_Keputusan)
             {
-                double[] data = new double[rows];
-                for (int row = 0; row <= rows - 1; row++)
-                {
-                    data[row] = NilaiAlternatif[row, coll];
-                }
-                double max = MaxOfArray(data);
-                for (int row = 0; row <= rows - 1; row++)
-                {
-                    MatriksNormal[row, coll] = NilaiAlternatif[row, coll] / max;
-                }
+                var tempSiswa = _NilaiAlternatif.Where(O => O.IdPendaftaran == siswa.IdPendaftaran).FirstOrDefault();
+                tempSiswa.Kelengkapan = siswa.Kelengkapan / Matriks_Keputusan.Max(O => O.Kelengkapan);
+                tempSiswa.Keahlian = siswa.Keahlian / Matriks_Keputusan.Max(O => O.Keahlian);
+                tempSiswa.NilaiBahasaInggris = siswa.NilaiBahasaInggris / Matriks_Keputusan.Max(O => O.NilaiBahasaInggris);
+                tempSiswa.NilaiBahasaIndonesia = siswa.NilaiBahasaIndonesia / Matriks_Keputusan.Max(O => O.NilaiBahasaIndonesia);
+                tempSiswa.NilaiMatematika = siswa.NilaiMatematika / Matriks_Keputusan.Max(O => O.NilaiMatematika);
+                tempSiswa.NilaiWawancara = siswa.NilaiWawancara / Matriks_Keputusan.Max(O => O.NilaiWawancara);
+                tempSiswa.NilaiKesehatan = siswa.NilaiKesehatan / Matriks_Keputusan.Max(O => O.NilaiKesehatan);
             }
-            return DatasMatriks;
+
+            return _NilaiAlternatif.ToList<SiswaMatriks>();
         }
 
-        public double[] Hasil()
+        public List<SiswaMatriks> Hasil()
         {
-            double[] hasil = new double[2];
-            /*double[,] MatriksN = MatriksKeputusan();
-            double[] hasil = new double[colls];
-            for (int i = 0; i <= rows - 1; i++)
+            ObservableCollection<Criteria> criterias = CriteriasCollection.BaseCriteria();
+            var hasil = MatriksNormal().Clone().ToArray();
+            foreach (var siswa in MatriksNormal())
             {
+                var tempSiswa = hasil.Where(O => O.IdPendaftaran == siswa.IdPendaftaran).FirstOrDefault();
+                tempSiswa.NilaiAkhir += siswa.Kelengkapan * criterias.Where(O => O.Code == "C1").FirstOrDefault().Bobot;
+                tempSiswa.NilaiAkhir += siswa.Keahlian * criterias.Where(O => O.Code == "C2").FirstOrDefault().Bobot;
+                tempSiswa.NilaiAkhir += siswa.NilaiBahasaInggris * criterias.Where(O => O.Code == "C3").FirstOrDefault().Bobot;
+                tempSiswa.NilaiAkhir += siswa.NilaiBahasaIndonesia * criterias.Where(O => O.Code == "C4").FirstOrDefault().Bobot;
+                tempSiswa.NilaiAkhir += siswa.NilaiMatematika * criterias.Where(O => O.Code == "C5").FirstOrDefault().Bobot;
+                tempSiswa.NilaiAkhir += siswa.NilaiWawancara * criterias.Where(O => O.Code == "C6").FirstOrDefault().Bobot;
+                tempSiswa.NilaiAkhir += siswa.NilaiKesehatan * criterias.Where(O => O.Code == "C7").FirstOrDefault().Bobot;
 
-                for (int j = 0; j <= colls - 1; j++)
-                {
-
-                    hasil[i] += bobot[i] * MatriksN[i, j];
-                }
-            }*/
-            return hasil;
-        }
-
-        public double MaxOfArray(double[] data)
-        {
-            var awal = data[0];
-            foreach (var item in data)
-            {
-                if (awal < item)
-                {
-                    awal = item;
-                }
             }
-            return awal;
+            return hasil.ToList<SiswaMatriks>();
         }
 
-
-        public double MinOfArray(double[] data)
-        {
-            var awal = data[0];
-            foreach (var item in data)
-            {
-                if (awal > item)
-                {
-                    awal = item;
-                }
-            }
-            return awal;
-        }
     }
-
 
 }

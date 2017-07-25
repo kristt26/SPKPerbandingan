@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Commmon
 {
-   public  class Criteria
+   public  class Criteria:ICloneable
     {
         public int Id { get; set; }
         public string Code { get; set; }
@@ -17,5 +17,10 @@ namespace Commmon
 
         public ObservableCollection<Alternative> Alternatives { get; set; }
         public Type TypeAlternative { get; internal set; }
+
+        public object Clone()
+        {
+            return MemberwiseClone();
+        }
     }
 }

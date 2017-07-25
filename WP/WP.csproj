@@ -43,5 +43,11 @@
     <Compile Include="WeightedProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SAW\Commmon\Commmon.csproj">
+      <Project>{24543D9C-A6C1-4B91-99AD-0EDE67BE3619}</Project>
+      <Name>Commmon</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

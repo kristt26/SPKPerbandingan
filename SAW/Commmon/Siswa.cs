@@ -15,7 +15,7 @@ namespace Commmon
         public TeoriMatematika Matematika { get; set; }
         public Wawancara HasilWawancara { get; set; }
         public Kesehatan HasilKesehatan { get; set; }
-        public int IdPendaftaran { get; set; }
+        public string IdPendaftaran { get; set; }
       
     }
 }

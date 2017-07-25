@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAW", "SAW\SAW.csproj", "{8D7BCE99-0873-483D-B885-98A64F53D1C6}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOPSIS", "..\TOPSIS\TOPSIS.csproj", "{3B6AEE60-681F-4D9C-BFAF-3FCE0DC5F4F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commmon", "Commmon\Commmon.csproj", "{24543D9C-A6C1-4B91-99AD-0EDE67BE3619}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewApp", "ViewApp\ViewApp.csproj", "{B0673B37-1E8D-4893-B099-F7682DB053D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{24543D9C-A6C1-4B91-99AD-0EDE67BE3619}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24543D9C-A6C1-4B91-99AD-0EDE67BE3619}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24543D9C-A6C1-4B91-99AD-0EDE67BE3619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0673B37-1E8D-4893-B099-F7682DB053D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0673B37-1E8D-4893-B099-F7682DB053D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0673B37-1E8D-4893-B099-F7682DB053D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0673B37-1E8D-4893-B099-F7682DB053D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

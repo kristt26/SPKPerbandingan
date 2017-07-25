@@ -20,4 +20,19 @@ namespace Commmon
     {
         Tidak,Sehat,SehatJasmani
     }
+
+    public enum JenisKelamin
+    {
+        L,P
+    }
+
+    public enum Agama
+    {
+        Islam,Khatolik,Protestan,Hindu,Budha,Honghuchu
+    }
+
+    public enum StatusKeluarga
+    {
+        Kandung,Tiri
+    }
 }

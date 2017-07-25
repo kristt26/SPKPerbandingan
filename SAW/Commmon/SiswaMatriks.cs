@@ -6,15 +6,21 @@ using System.Threading.Tasks;
 
 namespace Commmon
 {
-    public class SiswaMatriks
+    public class SiswaMatriks:ICloneable
     {
-        public int Kelengkapan { get; set; }
-        public int Keahlian { get; set; }
-        public int NilaiBahasaInggris { get; set; }
-        public int NilaiBahasaIndonesia { get; set; }
-        public int NilaiMatematika { get; set; }
-        public int NilaiWawancara { get; set; }
-        public int NilaiKesehatan { get; set; }
-        public int IdPendaftaran { get; set; }
+        public double Kelengkapan { get; set; }
+        public double Keahlian { get; set; }
+        public double NilaiBahasaInggris { get; set; }
+        public double NilaiBahasaIndonesia { get; set; }
+        public double NilaiMatematika { get; set; }
+        public double NilaiWawancara { get; set; }
+        public double NilaiKesehatan { get; set; }
+        public string IdPendaftaran { get; set; }
+        public double NilaiAkhir { get; set; }
+
+        public object Clone()
+        {
+            return MemberwiseClone();
+        }
     }
 }
