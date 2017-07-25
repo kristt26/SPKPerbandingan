@@ -1,6 +1,4 @@
-﻿using Commmon;
-using FirstFloor.ModernUI.Windows.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,19 +13,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ViewApp
+namespace ViewApp.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Index.xaml
     /// </summary>
-    public partial class MainWindow : ModernWindow
+    public partial class Index : Page
     {
-        public MainWindow()
+        public Index()
         {
             InitializeComponent();
-           
+            this.DataContext = new ViewModels.IndexViewModel();
         }
 
-        
+       
     }
 }
