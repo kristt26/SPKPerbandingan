@@ -23,10 +23,10 @@ public class KelengkapanBerkas : Alternative
             _nilai = value;
             if (value == StatusBerkas.Lengkap)
             {
-                this.Rank = 1;
+                this.Rank = 2;
             }
             else
-                this.Rank = 0;
+                this.Rank = 1;
 
         }
     }

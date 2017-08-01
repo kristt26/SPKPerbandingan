@@ -16,12 +16,12 @@ public class TeoriMatematika : Alternative
     {
         Ranks = new List<Range>
         {
-            new Range("0-50", 0, 50, 0, 0),
-            new Range("51-60", 51, 60, 1, 0),
-            new Range("61-70", 61, 70, 2, 0),
-            new Range("71-80", 71, 80, 3, 0),
-            new Range("81-90", 81, 90, 4, 0),
-            new Range("91-100", 91, 100, 5, 0)
+            new Range("0-50", 0, 50, 1, 0),
+            new Range("51-60", 51, 60, 2, 0),
+            new Range("61-70", 61, 70, 3, 0),
+            new Range("71-80", 71, 80, 4, 0),
+            new Range("81-90", 81, 90, 5, 0),
+            new Range("91-100", 91, 100, 6, 0)
         };
     }
 

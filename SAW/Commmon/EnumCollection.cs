@@ -8,31 +8,31 @@ namespace Commmon
 {
     public enum StatusBerkas
     {
-        Lengkap,Tidak
+        None,Lengkap,Tidak
     }
 
     public enum StatusWawancara
     {
-        Tidak,Kurang,Cukup,Siap
+        None,Tidak,Kurang,Cukup,Siap
     }
 
     public enum StatusKesehatan
     {
-        Tidak,Sehat,SehatJasmani
+        None,Tidak,Sehat,SehatJasmani
     }
 
     public enum JenisKelamin
     {
-        L,P
+        None,L,P
     }
 
-    public enum Agama
+    public enum agama
     {
-        Islam,Khatolik,Protestan,Hindu,Budha,Honghuchu
+        None,Islam,Khatolik,Protestan,Hindu,Budha,Honghuchu
     }
 
     public enum StatusKeluarga
     {
-        Kandung,Tiri
+        None,Kandung,Tiri
     }
 }

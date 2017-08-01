@@ -26,13 +26,11 @@ namespace Commmon
             {
                 _nilai = value;
                 if (_nilai == StatusKesehatan.Tidak)
-                    this.Rank = 0;
-                else if (_nilai == StatusKesehatan.Sehat)
                     this.Rank = 1;
-                else
+                else if (_nilai == StatusKesehatan.Sehat)
                     this.Rank = 2;
-                    
-
+                else
+                    this.Rank = 3;
             }
         }
 

@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Input;
 
-namespace ViewApp
+namespace ViewApp.ViewModels
 {
     public class CommandHandler : ICommand
     {

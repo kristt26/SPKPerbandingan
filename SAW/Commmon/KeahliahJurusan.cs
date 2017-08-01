@@ -14,10 +14,10 @@ namespace Commmon
         {
             Ranks = new List<Range>
             {
-                new Range("<70", 0, 70, 0, 0),
-                new Range("71-80", 71, 80, 1, 0),
-                new Range("81-90", 81, 90, 2, 0),
-                new Range("91-100", 91, 100, 3, 0)
+                new Range("<70", 0, 70, 1, 0),
+                new Range("71-80", 71, 80, 2, 0),
+                new Range("81-90", 81, 90, 3, 0),
+                new Range("91-100", 91, 100, 4, 0)
             };
         }
 

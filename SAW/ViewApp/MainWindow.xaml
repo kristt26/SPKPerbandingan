@@ -4,9 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
         xmlns:local="clr-namespace:ViewApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" WindowState="Maximized">
     <mui:ModernWindow.MenuLinkGroups>
         <mui:LinkGroup DisplayName="Home" >
             <mui:LinkGroup.Links>
@@ -15,8 +16,10 @@
                 <mui:Link DisplayName="link 3" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="Siswa" >
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Data Siswa" Source="Pages/DataCalonSiswa.xaml" />               
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
     </mui:ModernWindow.MenuLinkGroups>
-
-
-
 </mui:ModernWindow>

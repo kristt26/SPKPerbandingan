@@ -12,18 +12,12 @@ namespace Commmon
         public string TahunAjaran { get; set; }
         public string NamaSiswa { get; set; }
         public string TempatLahir { get; set; }
-        public DateTime Tanggal_lahir { get; set; }
+        public DateTime TanggalLahir { get; set; }
         public JenisKelamin JK { get; set; }
-        public Agama agama { get; set; }
+        public agama Agama { get; set; }
         public StatusKeluarga statusKeluarga { get; set; }
         public string Alamat { get; set; }
         public string AsalSekolah { get; set; }
-        public string NamaAyah { get; set; }
-        public string PekerjaanAyah { get; set; }
-        public string NamaIbu { get; set; }
-        public string PekerjaanIbu { get; set; }
-        public string Kontak { get; set; }
-        public string AlamatOrtu { get; set; }
         public double NilaiAkhir { get; set; }
 
         public object Clone()
